@@ -1,9 +1,5 @@
 package com.app.foodbox.model;
-
-import java.sql.Date;
-
 import javax.persistence.*;
-
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Entity
