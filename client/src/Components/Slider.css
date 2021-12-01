@@ -1,0 +1,12 @@
+.container-slider {
+  max-width: 1500px;
+  position: relative;
+  margin: auto;
+  z-index: -1;
+  margin-bottom: -380px;
+}
+.home-image {
+  width: 1500px;
+  height: 750px;
+  mask-image: linear-gradient(to bottom, black 45%, transparent 55%);
+}

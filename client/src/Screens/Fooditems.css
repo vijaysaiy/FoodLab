@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  margin-left: 4rem;
+  margin-top: 4rem;
+  flex: 0.15;
+}
+.col-lg-2  ul li {
+  padding: 5px;
+  list-style: none;
+}
+.col-lg-2 ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.col-lg-2 ul li a:hover {
+  color: rgb(255, 60, 0);
+  font-weight: bold;
+}
+.divider {
+  margin-top: 4rem;
+  border-right: 1px solid grey;
+}
+.right {
+  margin-top: 4rem;
+  margin-left: 2rem;
+  flex: 0.75;
+}
+
+.card {
+  margin-top: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: white;
+}
+.meal {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.meal h3 {
+  margin: 0 0 0.25rem 0;
+}
+.right h3:first-letter {
+  text-transform: capitalize;
+}
+.description {
+  font-style: italic;
+}
+
+.price {
+  margin-top: 0.25rem;
+  font-weight: bold;
+  color: #ad5502;
+  font-size: 1.25rem;
+}
+img {
+  width: 200px;
+  margin-left: auto;
+}
+.subtotal {
+  margin-left: auto;
+  margin-bottom: auto;
+  font-weight: bold;
+  font-size: 1.25rem;
+}

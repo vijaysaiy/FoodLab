@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CapstoneProjectApplication<foodbox>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.app.foodbox.CapstoneProjectApplication",
+            "projectName": "foodbox",
+            "args": ""
+        }
+    ]
+}

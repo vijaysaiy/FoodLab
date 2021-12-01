@@ -1,0 +1,174 @@
+[
+    {
+        "name":"Tandoori Chicken",
+        "description":"Juicy chicken marinated in a combination of flavourful spices and roasted to perfection in tandoor. (Served with chutney And Salad). (1 chest piece, 1 leg piece of chicken served )",
+        "price":299,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/vji26sdj65v3sgjv1yfz",
+        "category":"kebabs"
+    },
+    {
+        "name":"Grill Chicken",
+        "description":"A scrumptious combo of lip smacking grilled chicken .(Served with chutney, Mayonnaise And Salad)",
+        "price":220,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/mkqw42qgum5ibudjivu2",
+        "category":"kebabs"
+    },
+    {
+        "name":"Chicken Tikka",
+        "description":"Super soft chunks of chicken are coated with a spicy and peppery masala and grilled to perfection. (Served with chutney And Salad)",
+        "price":220,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/jyvlqtxwrkzyxnixv1j0",
+        "category":"kebabs"
+    },
+    {
+        "name":"Chicken Biryani Single",
+        "description":"Aromatic rice preparation layered with marinated chicken pieces and spices slow-cooked to perfection. Serves one. (Biryani Served with Chicken 1 pc, Salan, Raita and Salad)",
+        "price":140,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/ji9d2c1g1gboduallqkz",
+        "category":"maincourse"
+    },
+    {
+        "name":"Chicken Biryani Regular",
+        "description":"Aromatic rice preparation layered with marinated chicken pieces and spices slow-cooked to perfection. Serves 2. (Biryani Served with Chicken 2 pc, Salan, Raita and Salad)",
+        "price":240,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/f5dvzudqmrelamgtm4r3",
+        "category":"maincourse"
+    },
+    {
+        "name":"Mutton Biryani",
+        "description":"Wholesome biryani prepared with succulent mutton, aromatic basmati biryani rice and whole spices. (Biryani Served with Mutton 6 pc, Egg, Salan, Raita and Salad)",
+        "price":240,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/xw0cmfmpqzx8taca5asi",
+        "category":"maincourse"
+    },
+    {
+        "name":"Veg Biryani",
+        "description":"Serves with Gravy,Raita,Salad",
+        "price":120,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/rxjo68dgwtvtpoe1ccer",
+        "category":"maincourse"
+    },
+    {
+        "name":"Veg Biryani (Family Pack)",
+        "description":"A flavorful combination of rice and assorted veggies cooked in a fragrant and flavorful masala seasoned with Indian whole spices. Biryani Served with Salan, Raita and Salad.",
+        "price":380,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/iwzed7etjzj0tgou9zsm",
+        "category":"maincourse"
+    },
+    {
+        "name":"Paneer Biryani",
+        "description":"A super delicious and aromatic Indian rice entree made using fragrant basmati rice, cubes of paneer (Indian cottage cheese) and spices. Biryani Served with Salan, Raita and Salad.",
+        "price":200,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/polkfflq7inmrytfo5y5",
+        "category":"maincourse"
+    },
+    {
+        "name":"Chicken Shawarma",
+        "description":"A flavorsome shawarma filled with succulent grilled chicken, mayonnaise and other sauces. (Served with Tomato Sauce) serves 1",
+        "price":120,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/chwtsnwmrz6pgt5f2nzf",
+        "category":"shawarmas"
+    },
+    {
+        "name":"Istah's Chicken Shawarma Rumali",
+        "description":"(100% Halal & Breast Boneless Chicken) Fresh rumali loaded with diced chicken (contains more chicken instead of onions). Loaded with egg based garlic mayonnaise & with a touch of in-house sauce.",
+        "price":170,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/n7xeudvhncei2g13c1nq",
+        "category":"shawarmas"
+    },
+    {
+        "name":"Paneer Shawarma",
+        "description":"Fresh rumali loaded with grilled paneer & salad. Loaded with egg based garlic mayonnaise & with a touch of in-house sauce",
+        "price":170,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/ngksqnpcgt0qe39qwh77",
+        "category":"shawarmas"
+    },
+    {
+        "name":"Chicken Corn Soup",
+        "description":"A flavorsome Chicken soup with corn broth",
+        "price":120,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/ocpgtfjba6hywqwvd0gx",
+        "category":"soups"
+    },
+    {
+        "name":"Chicken Hot & Sour Soup",
+        "description":"A flavorsome Chicken soup with blended spices",
+        "price":120,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/sujxp3nafqtmidpogf9c",
+        "category":"soups"
+    },
+    {
+        "name":"Chicken Manchow Soup",
+        "description":"A flavorsome Chicken soup with blended spices",
+        "price":120,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/ksyb6lhch0ak4nabsypx",
+        "category":"soups"
+    },
+    {
+        "name":"Double Ka Meetha",
+        "description":"Sweet",
+        "price":120,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/wsyv88x1jl0rsgfvllzd",
+        "category":"desserts"
+    },
+    
+    {
+        "name":"Gajar Ka Halwa",
+        "description":"Sweet",
+        "price":120,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/co0rlqrpe7vsvdvbtc68",
+        "category":"desserts"
+    },
+    {
+        "name":"Gulab Jamun",
+        "description":"Sweet",
+        "price":99,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/r7xmupyvqyekv60c45gg",
+        "category":"desserts"
+    },
+  
+    {
+        "name":"Kaddu Ka Kheer",
+        "description":"Sweet",
+        "price":99,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/ci53j3k2nae7epow5dew",
+        "category":"desserts"
+    },
+    {
+        "name":"Paneer Tikka",
+        "description":"Roasted Paneer",
+        "price":299,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/awdmt8aghpf2iopmrkhn",
+        "category":"starters"
+    },
+    {
+        "name":"Peshawari Paneer Tikka",
+        "description":"Roasted Paneer",
+        "price":299,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/kqvbzw0kwpp1af5hdtit",
+        "category":"starters"
+    },
+    {
+        "name":"Veg Hara Bhara Kebab",
+        "description":"Mixed veg Patties",
+        "price":299,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/pfs9p0kzikyqipfnjoyt",
+        "category":"starters"
+    },
+    {
+        "name":"Apollo Fish",
+        "description":"Roasted fish",
+        "price":429,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/taxb0hhfz3dztchxg3ob",
+        "category":"starters"
+    },
+    {
+        "name":"Chicken 65",
+        "description":"Roasted chicken",
+        "price":429,
+        "imgSrc":"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/xwai6eee8jtm4bokxgwq",
+        "category":"starters"
+    }
+    
+
+]
