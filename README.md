@@ -38,10 +38,10 @@ You are hired as the Full Stack Java developer and are asked to develop the web 
 
   How to use this project?
   
-  Clone the project on your local machine and open it in VScode.
+  Clone the project on your local machine and open it in VS code.
    
     Note:
-    The following extensions must be installed in VScode
+    The following extensions must be installed in VS code
     1.Java Extension pack
     2.Spring tools extension pack by pivotal
 
