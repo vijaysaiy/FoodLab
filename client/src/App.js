@@ -9,7 +9,6 @@ import Login from "./Screens/Login"
 import Signup from "./Screens/Signup"
 import Checkout from "./Screens/Checkout/index";
 import AdminDashboard from "./Screens/Admin";
-import PurchaseReport from "./Components/PurchaseReport";
 import UserDashboard from "./Screens/User/index";
 import OrderSummary from "./Screens/OrderSummary";
 
@@ -46,8 +45,7 @@ function App() {
           <Route exact path="/success" component={OrderSummary} />          
           <Route exact path ='/' component ={Home}/>
        </Switch>
-     </main>
-     <PurchaseReport/>
+     </main>    
    </Router>
   );
 }
