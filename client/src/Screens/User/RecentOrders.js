@@ -19,7 +19,7 @@ function RecentOrders() {
    },[user])
 
    if(error){
-     return (<p>No Recent Orders</p>)
+     return (<h3>No Recent Orders</h3>)
    } else{
     return (
         <Table striped bordered hover>
