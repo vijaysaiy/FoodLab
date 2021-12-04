@@ -1,18 +1,20 @@
 import Navbar from "./Components/Navbar/index.js"
 import { BrowserRouter as Router, Route, Switch,Redirect } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 //screens
 import Home from "./Screens/Home"
 import FooditemsList from "./Screens/FooditemsList"
 import Cart from "./Screens/Cart"
 import Login from "./Screens/Login"
 import Signup from "./Screens/Signup"
-import Checkout from "./Screens/Checkout/Checkout";
+import Checkout from "./Screens/Checkout/index";
 import AdminDashboard from "./Screens/Admin";
 import PurchaseReport from "./Components/PurchaseReport";
-import UserDashboard from "./Screens/User/UserDashboard";
+import UserDashboard from "./Screens/User/index";
 import OrderSummary from "./Screens/OrderSummary";
-import { useSelector } from "react-redux";
+
+
+
 function App() {
   const user = useSelector(state => state.user.currentUser)
    return (

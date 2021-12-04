@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 
-import { getProducts,searchProducts } from "../redux/APIcalls/products";
+import { getProducts,searchProducts } from "../APIcalls/products";
 import ErrorCompnonent from "./ErrorCompnonent";
 import Fooditem from "./Fooditem";
 

@@ -55,6 +55,6 @@ After installing all the node modules, run
 
     npm start
 
-This will start your application on your browser 
+This will start your application on your browser. 
 
-Before doing this start the server by clicking on play button from JAVA PROJECTs workspace of vscode
+Before doing this start the server by clicking on play button from JAVA PROJECTs workspace of vscode.

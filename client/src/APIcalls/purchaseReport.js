@@ -3,6 +3,7 @@ import axios from "axios";
 export const pushToDatabase = async (report) => {
     try{
         const res = await axios.post("http://localhost:8080/purchase/add",report);
+        console.log(res.data)
     }catch(e){
         console.log(e);
     }

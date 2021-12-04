@@ -1,7 +1,7 @@
 import {React,useState} from 'react'
 import { Form, Button, Container, } from "react-bootstrap";
 import { useSelector} from 'react-redux';
-import {updateUserDetails} from "../../redux/APIcalls/user"
+import {updateUserDetails} from "../APIcalls/user"
 function Account() {
   const user = useSelector(state => state.user.currentUser);
   // const existingDetails = {id:user.id,email:user.email,username:user.username,password:user.password,mobile:user.mobile,cpassword:""}

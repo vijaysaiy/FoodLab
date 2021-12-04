@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Form, Button, Container, Card } from "react-bootstrap";
-import { register } from '../redux/APIcalls/user';
+import { register } from '../APIcalls/user';
 
 function Signup() {
   const initialValues = {username:"",email:"",mobile:""};

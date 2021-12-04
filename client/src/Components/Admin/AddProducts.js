@@ -1,7 +1,7 @@
 import {React,useState} from 'react'
 import { Form, Button, Container, } from "react-bootstrap";
 
-import {addProduct} from "../../redux/APIcalls/products"
+import {addProduct} from "../../APIcalls/products"
 
 function EditProducts() {
   const [details,setDetails] =useState([]);

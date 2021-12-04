@@ -1,11 +1,14 @@
 import { React, useState, useEffect } from "react";
 import { Table } from "react-bootstrap";
-import { deleteProduct, getAllProducts, updateProduct,} from "../../redux/APIcalls/products";
+import { deleteProduct, getAllProducts, updateProduct,} from "../../APIcalls/products";
+import ErrorCompnonent from "../ErrorCompnonent";
 
 function ProductsList({ setScreen, setItem }) {
 
   const [products, setProducts] = useState([]);
-  const [change,setChange] = useState(false)
+  const [change,setChange] = useState(false);
+  
+
   function handleEdit(item) {
     setItem(item);
     setScreen("edit");
@@ -33,6 +36,10 @@ function ProductsList({ setScreen, setItem }) {
     };
     fetchAPIData();
   }, [change]);
+
+  if(!products){
+    return (<ErrorCompnonent />)
+  }
   return (
     <>
       <h2>Manage Products</h2>
@@ -53,6 +60,7 @@ function ProductsList({ setScreen, setItem }) {
                 <td>{item.price}</td>
                 <td>{item.category}</td>
                 <td>{item.enabled.toString()}</td>
+                <td>
                 <button className="btn btn-outline-warning fw-bold me-2 mx-2 my-2" onClick={() => handleEdit(item)}>
                   Edit
                 </button>
@@ -67,6 +75,7 @@ function ProductsList({ setScreen, setItem }) {
                   disabled={item.enabled}>
                   Enable
                 </button>
+                </td>
               </tr>
             );
           })}

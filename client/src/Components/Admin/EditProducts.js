@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { Form, Button, Container } from "react-bootstrap";
-import {  updateProduct } from "../../redux/APIcalls/products";
+import {  updateProduct } from "../../APIcalls/products";
 
 function EditProducts({ item }) {
   let initialValues = {...item}

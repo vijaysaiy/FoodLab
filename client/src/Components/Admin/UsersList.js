@@ -1,24 +1,37 @@
 import { React, useState, useEffect } from "react";
 import { Table } from "react-bootstrap";
-import { getAllUsers,deleteUser } from '../../redux/APIcalls/user'
+import { getAllUsers,deleteUser,getAllAdmins } from '../../APIcalls/user'
+import ErrorCompnonent from "../ErrorCompnonent";
 
-function UsersList() {
+function UsersList({type}) {
 const [users,setUsers] = useState([]);
 const [isDeleted, setIsDeleted] = useState(false);
+const [title,setTitle] = useState("")
 function handleDelete(id){
   deleteUser(id);
   setIsDeleted(!isDeleted);
 }
 useEffect(() => {
     const fetchAPIData = async () => {
-      const data = await getAllUsers();
+      let data;
+      if(type === "users"){
+        data = await getAllUsers();
+        setTitle("Users List")
+      }else{
+        data = await getAllAdmins();
+        setTitle("Admins List")
+      }
       setUsers(data);
     };
     fetchAPIData();
-  },[isDeleted]);
+  },[isDeleted,type]);
+
+  if(!users){
+    return (<ErrorCompnonent />)
+  }
     return (
         <>
-        <h2>Manage Products</h2>
+        <h2>{title}</h2>
         <Table>
           <thead>
             <tr>

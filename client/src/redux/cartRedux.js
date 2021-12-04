@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { pushToDatabase } from "../redux/APIcalls/purchaseReport";
+import { pushToDatabase } from "../APIcalls/purchaseReport";
 
 export const getTotalPrice = (products) => {
   return products.reduce((sum, { price, quantity }) => sum + price * quantity,0);
@@ -57,8 +57,7 @@ const cartSlice = createSlice({
       };
       state.purchaseReport.push(newReport);
       pushToDatabase(newReport);
-      localStorage.removeItem("cart");
-      state.purchaseReport = [];
+      localStorage.removeItem("cart");      
       state.products = [];
     },
   },

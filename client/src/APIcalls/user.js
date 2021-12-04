@@ -1,5 +1,5 @@
 import axios from "axios";
-import { loginFailure, loginStart, loginSucess } from "../userRedux";
+import { loginFailure, loginStart, loginSucess } from "../redux/userRedux";
 
 export const login = async (dispatch,user) => {
     dispatch(loginStart());
@@ -19,7 +19,8 @@ export const login = async (dispatch,user) => {
 }
 export const register = async (user) => {
     try {
-        const res = await axios.post("http://localhost:8080/users/add",user)
+        const res = await axios.post("http://localhost:8080/users/add",user);
+        console.log(res.data)
     } catch (error) {
         console.log(error)
     }
@@ -33,7 +34,8 @@ export const updateUserDetails = async (userDetails) => {
         url =`http://localhost:8080/users/update/${userDetails.id}`
     }
     try{       
-        const res = await axios.put(url,userDetails)
+        const res = await axios.put(url,userDetails);
+        console.log(res.data);
     }catch (error) {
         console.log(error)
     }

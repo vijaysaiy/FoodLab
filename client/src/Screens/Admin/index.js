@@ -1,16 +1,13 @@
 import { React, useState } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
-import Account from "../User/Account";
-import AddProducts from "./AddProducts";
-import AdminsList from "./AdminsList";
-import EditProducts from "./EditProducts";
-import ProductsList from "./ProductsList";
-import UsersList from "./UsersList";
+import Account from "../../Components/UpdateAccount";
+import AddProducts from "../../Components/Admin/AddProducts";
+import EditProducts from "../../Components/Admin/EditProducts";
+import ProductsList from "../../Components/Admin/ProductsList";
+import UsersList from "../../Components/Admin/UsersList";
 function AdminDashboard() {
   const [screen, setScreen] = useState("products");
   const [item,setItem] = useState([]);
-  let category = "all";
-
   return (
     <div className="container">
       <div className="col-lg-2  me-2 my-5">
@@ -37,9 +34,9 @@ function AdminDashboard() {
         {screen === "products" && <ProductsList  setScreen = {setScreen} setItem ={setItem}/>}
         {screen === "add" && <AddProducts />}
         {screen === "edit" && <EditProducts item ={item} />}
-        {screen === "users" && <UsersList />}
-        {screen === "admins" && <AdminsList />}
-        {screen === "account" && <Account />}
+        {screen === "users" && <UsersList  type = {"users"}/>}
+        {screen === "admins" && <UsersList type ={"admins"} />}
+        {screen === "account" && <Account/>}
       </div>
     </div>
   );

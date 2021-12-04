@@ -1,7 +1,7 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
-import RecentOrders from "./RecentOrders";
-import Account from "./Account";
+import RecentOrders from "../../Components/RecentOrders";
+import UpdateAccount from "../../Components/UpdateAccount";
 function UserDashboard() {
   const [orders, setOrders] = useState(true);
   const [title, setTitle] = useState("Recent Orders");
@@ -34,7 +34,7 @@ function UserDashboard() {
       <div className="divider me-5"></div>
       <div className="col-lg-8 my-5">
         <h1>{title}</h1>
-        {orders ? <RecentOrders /> : <Account />}
+        {orders ? <RecentOrders /> : <UpdateAccount />}
       </div>
     </div>
   );

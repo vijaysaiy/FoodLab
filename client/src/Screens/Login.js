@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../redux/APIcalls/user";
+import { login } from "../APIcalls/user";
 function Login() {
   const [email, setEmail] =useState("")
   const [password, setPassword] =useState("")

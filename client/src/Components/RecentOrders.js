@@ -1,7 +1,7 @@
 import {React,useState,useEffect} from 'react'
 import { Table } from "react-bootstrap";
 import { useSelector } from 'react-redux';
-import {getReport} from "../../redux/APIcalls/purchaseReport"
+import {getReport} from "../APIcalls/purchaseReport"
 function RecentOrders() {
   const user = useSelector(state=>state.user.currentUser)
    const [report,setReport] = useState([]);
