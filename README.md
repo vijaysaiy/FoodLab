@@ -57,4 +57,4 @@ After installing all the node modules, run
 
 This will start your application on your browser 
 
-Before doing this start the server by clicking on  lay button from JAVA PROJECTs workspace of vscode
+Before doing this start the server by clicking on play button from JAVA PROJECTs workspace of vscode
