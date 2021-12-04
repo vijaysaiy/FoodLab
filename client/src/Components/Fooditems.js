@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 
 import { getProducts,searchProducts } from "../redux/APIcalls/products";
+import ErrorCompnonent from "./ErrorCompnonent";
 import Fooditem from "./Fooditem";
 
 function Fooditems({ category, search }) {
@@ -25,7 +26,7 @@ function Fooditems({ category, search }) {
   }, [category, search]);
 
   if (error) {
-    return <h1>Something went wrong</h1>;
+    return <ErrorCompnonent/>
   }
    else{
     return (

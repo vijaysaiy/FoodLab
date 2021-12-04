@@ -1,6 +1,8 @@
 package com.app.foodbox.controller;
 import java.util.List;
 
+import javax.security.auth.login.LoginException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -31,7 +33,7 @@ public class AdminController {
 	
 	//Login
 	@PostMapping("login")
-	public Admins login(@RequestBody Admins user) throws Exception{
+	public Admins login(@RequestBody Admins user) throws LoginException {
 		String email = user.getEmail();
 		String pwd = user.getPassword();
 		Admins userObj = null;
@@ -39,7 +41,7 @@ public class AdminController {
 			userObj = (Admins) adminrespository.findByEmailAndPassword(email, pwd);
 		}
 		if(userObj == null){
-			 throw new Exception("Bad Credentials");
+			 throw new LoginException("Bad Credentials");
 		}
 		return userObj;
 	}

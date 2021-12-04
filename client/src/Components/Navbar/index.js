@@ -1,9 +1,10 @@
 import {React,useState} from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import {Navbar,Nav,NavDropdown,Form,FormControl,Button,Container,Badge } from "react-bootstrap"
+import {Navbar,Nav,Form,FormControl,Button,Container,Badge } from "react-bootstrap"
 import {getTotalQuantity} from '../../redux/cartRedux'
 import AccountMenu from "./AccountMenu";
+import CategoryMenu from "./CategoryMenu";
 
 function NavigationBar() {
   const { products  } = useSelector((state) => state.cart);
@@ -28,26 +29,7 @@ function NavigationBar() {
             <Nav.Link as={Link} to="/fooditems/all">
               Food Items
             </Nav.Link>
-            <NavDropdown title="Categories" id="navbarScrollingDropdown">
-              <NavDropdown.Item as={Link} to="/fooditems/starters">
-                Starters
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/fooditems/maincourse">
-                Main Course
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/fooditems/shawarmas">         
-              Shawarmas
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/fooditems/kebabs">         
-               Kebab Special
-              </NavDropdown.Item>              
-              <NavDropdown.Item as={Link} to="/fooditems/soups">         
-               Soups
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/fooditems/desserts">         
-               Deserts
-              </NavDropdown.Item>
-            </NavDropdown>
+            <CategoryMenu/>
           </Nav>
           <Form className="d-flex mx-auto">
             <FormControl

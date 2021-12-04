@@ -48,7 +48,7 @@
 .meal h3 {
   margin: 0 0 0.25rem 0;
 }
-.right h3:first-letter {
+ .col-lg-8 h3:first-letter {
   text-transform: capitalize;
 }
 .description {
@@ -70,4 +70,49 @@ img {
   margin-bottom: auto;
   font-weight: bold;
   font-size: 1.25rem;
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    display: flex;
+    flex-direction:column;
+  }
+.image{
+  display:none;
+  visibility:hidden;
+}
+.description{
+  display:none;
+  visibility:hidden;
+}
+.divider{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid grey;
+}
+
+  
+}
+@media screen and (max-width: 320px) {
+  .container {
+    display: flex;
+    flex-direction:column;
+  }
+.image{
+  display:none;
+  visibility:hidden;
+}
+.description{
+  display:none;
+  visibility:hidden;
+}
+.divider{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid grey;
+}
+.buy-btn{
+  margin-top: 10px;
+}
+  
 }

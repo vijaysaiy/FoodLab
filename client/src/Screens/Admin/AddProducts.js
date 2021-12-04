@@ -1,26 +1,25 @@
-import { React, useState } from "react";
-import { Form, Button, Container } from "react-bootstrap";
-import {  updateProduct } from "../../redux/APIcalls/products";
+import {React,useState} from 'react'
+import { Form, Button, Container, } from "react-bootstrap";
 
-function EditProducts({ item }) {
-  let initialValues = {...item}
-  const [details,setDetails] =useState(initialValues);
+import {addProduct} from "../../redux/APIcalls/products"
+
+function EditProducts() {
+  const [details,setDetails] =useState([]);
   function handleChange(event) {
     let name = event.target.name;
     let value = event.target.value;
      setDetails({...details,[name]: value });    
   }
   function handleSubmit(event){
-    event.preventDefault();
-    updateProduct(details);
-    alert("Product updated successfully")
+    event.preventDefault();  
+    addProduct(details);
+    alert("Product Added successfully")
     
-  }  
-
-  return (
-    <>
-      <h2>Edit Products</h2>
-      <Container className="my-3" style={{ width: "400px" }}>
+  }
+    return (
+      <>
+        <h2>Add Products</h2>
+        <Container className="my-3" style={{ width: "400px" }}>
         <Form>
           <Form.Group className="mb-3" >
             <Form.Label>Name</Form.Label>
@@ -49,7 +48,7 @@ function EditProducts({ item }) {
             <Form.Label>Image Source</Form.Label>
             <Form.Control
               type="text"              
-              placeholder="Description"
+              placeholder="Image URL"
               style={{ width: "400px" }}
               name="imgSrc"
               value={details.imgSrc}
@@ -60,7 +59,7 @@ function EditProducts({ item }) {
             <Form.Label>Category</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Category"
+              placeholder="Enter Category"
               style={{ width: "400px" }}
               name="category"
               value={details.category}
@@ -84,8 +83,8 @@ function EditProducts({ item }) {
           </Button>
         </Form>
       </Container>
-    </>
-  );
+   </>
+    )
 }
 
-export default EditProducts;
+export default EditProducts

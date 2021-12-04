@@ -29,6 +29,9 @@ public class Products {
 	@Column(name = "price")
 	private int price;
 
+	@Column(name = "isEnabled")
+	private boolean isEnabled = true;
+
 	public int getId() {
 		return id;
 	}
@@ -75,6 +78,14 @@ public class Products {
 
 	public void setImgSrc(String imgSrc) {
 		this.imgSrc = imgSrc;
+	}
+
+	public boolean isEnabled() {
+		return isEnabled;
+	}
+
+	public void setEnabled(boolean isEnabled) {
+		this.isEnabled = isEnabled;
 	}
 
 }

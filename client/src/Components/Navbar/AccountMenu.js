@@ -23,7 +23,7 @@ function AccountMenu() {
   if(user){
       return (
         <NavDropdown title={account} id="navbarScrollingDropdown" className="me-2">        
-        <NavDropdown.Item as={Link} to={profile}>
+        <NavDropdown.Item as={Link} to= {`/${profile}`}>
           Profile
         </NavDropdown.Item>
         <NavDropdown.Item  onClick={() =>dispatch(logout())} >
@@ -31,7 +31,9 @@ function AccountMenu() {
         </NavDropdown.Item>      
       </NavDropdown>
       )
-  } else{
+  } 
+  else
+  {
   return (
     <NavDropdown title={account} id="navbarScrollingDropdown" className="me-2">        
       <NavDropdown.Item as={Link} to="/signin">

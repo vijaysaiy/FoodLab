@@ -15,22 +15,22 @@ function Fooditem(item) {
    function handleClick(){
       dispatch(addToCart({...item,quantity}))
    }
-  
+     
    return (
     <li className="meal" key ={item.id}>         
     <div>
       <h3>{item.name}</h3>
-      <div className="description"> {item.description}</div>
+      <div className="description"><p> {item.description}</p></div>
       <div className="price">
         <p>₹{item.price}</p>
         Qty:
         <Button className="me-2 mx-2" variant="outline-danger" onClick = {()=>handleQty("decrement")}>-</Button>
         {quantity}
         <Button variant="outline-success" className="me-2 mx-2" onClick = {()=>handleQty("increment")}>+</Button>
-        <Button onClick ={handleClick}> Add</Button>
+        <Button className="buy-btn"onClick ={handleClick}> Add</Button>
       </div>
     </div>
-    <img src={item.imgSrc} alt="fooditem" />
+    <img className="image my-auto" src={item.imgSrc} alt="fooditem" />
     <div></div>
   </li>
 )

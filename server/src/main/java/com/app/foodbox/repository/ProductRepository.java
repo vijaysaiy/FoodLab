@@ -13,17 +13,15 @@ import com.app.foodbox.model.Products;
 @Transactional
 public interface ProductRepository extends CrudRepository<Products, Integer>{
 	
-
+	List<Products> findAllByIsEnabledTrue();
 
 	List<Products> findByCategory(String category);
 
-
 	Iterable<Products> findAllByNameContainingIgnoreCase(String name);
 
-
-
-
 	List<Products> findByName(String name);
+
+    
 
 
 	

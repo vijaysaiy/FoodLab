@@ -1,4 +1,4 @@
-import Navbar from "./Components/Navbar/Navbar"
+import Navbar from "./Components/Navbar/index.js"
 import { BrowserRouter as Router, Route, Switch,Redirect } from "react-router-dom";
 
 //screens
@@ -8,7 +8,7 @@ import Cart from "./Screens/Cart"
 import Login from "./Screens/Login"
 import Signup from "./Screens/Signup"
 import Checkout from "./Screens/Checkout/Checkout";
-import AdminDashboard from "./Screens/Admin/AdminDashboard";
+import AdminDashboard from "./Screens/Admin";
 import PurchaseReport from "./Components/PurchaseReport";
 import UserDashboard from "./Screens/User/UserDashboard";
 import OrderSummary from "./Screens/OrderSummary";
@@ -30,14 +30,17 @@ function App() {
           <Route exact path="/register">
             {user ? <Redirect to ="/" /> : <Signup />}
           </Route>
-          <Route exact path="/admin">
-            {user ?  <AdminDashboard />:<Redirect to ="/" />}
+          <Route exact path="/admin/">
+            {user ?  <AdminDashboard /> : <Redirect to ="/" />}
           </Route>
+          
           <Route exact path="/user">
-            {user ? <UserDashboard />:<Redirect to ="/" />}
+            {user ? <UserDashboard /> : <Redirect to ="/" />}            
+          </Route>
+          <Route exact path="/checkout">
+            {user ? <Checkout /> : <Redirect to ="/signin" />}            
           </Route>
 
-          <Route exact path="/checkout" component={Checkout} />                  
           <Route exact path="/success" component={OrderSummary} />          
           <Route exact path ='/' component ={Home}/>
        </Switch>

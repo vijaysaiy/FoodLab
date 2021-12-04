@@ -26,7 +26,7 @@ function FooditemsList() {
     // <div className="container">
     //   <div className="left">
     <div className="container">
-      <div className="col-lg-2 my-5">
+      <div className="col-lg-2 my-5 ">
         <h3>Categories</h3>
         <ul>
           <li>

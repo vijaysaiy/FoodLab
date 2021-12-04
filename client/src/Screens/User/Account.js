@@ -4,7 +4,8 @@ import { useSelector} from 'react-redux';
 import {updateUserDetails} from "../../redux/APIcalls/user"
 function Account() {
   const user = useSelector(state => state.user.currentUser);
-  const existingDetails = {id:user.id,email:user.email,username:user.username,password:user.password,mobile:user.mobile,cpassword:""}
+  // const existingDetails = {id:user.id,email:user.email,username:user.username,password:user.password,mobile:user.mobile,cpassword:""}
+  const existingDetails = {...user,cpassword:""};
   const [userDetails,setUserDetails] = useState(existingDetails);
   const handleChange = (event) =>{
     let name = event.target.name;
@@ -12,9 +13,9 @@ function Account() {
     setUserDetails({...userDetails,[name]: value});
   }
   const handleSubmit = (event) =>{
-    event.preventDefault();
-    console.log(userDetails)
+    event.preventDefault();   
     updateUserDetails(userDetails);
+    alert("Update Successfull")
   }
     return (        
       <Container className="my-2" style={{ width: "400px" }}>

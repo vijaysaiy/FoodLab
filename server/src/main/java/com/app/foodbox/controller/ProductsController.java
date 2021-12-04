@@ -1,6 +1,7 @@
 package com.app.foodbox.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +25,10 @@ public class ProductsController {
 	ProductRepository productrepository;
 
 	// get all products
+	@GetMapping("enabled")
+	public List<Products> getEnabledProducts() {
+		return  productrepository.findAllByIsEnabledTrue();
+	}
 	@GetMapping("all")
 	public List<Products> getAllProducts() {
 		return (List<Products>) productrepository.findAll();
@@ -39,6 +45,16 @@ public class ProductsController {
 	@DeleteMapping("delete/{id}")
 	public void deleteProducts(@PathVariable int id) {
 		productrepository.deleteById(id);
+	}
+
+	@PutMapping("update/{id}")
+	public Products updateProducts(@RequestBody Products product){
+		return productrepository.save(product);
+	}
+	// search by id
+	@GetMapping("/search/{id}")
+	public Optional<Products> searchProducts(@PathVariable int id) {
+		return  productrepository.findById(id);
 	}
 
 	// search by name

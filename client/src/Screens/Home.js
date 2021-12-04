@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Row} from "react-bootstrap"
 import Specials from "../Components/Specials";
 import "./Home.css";
 import specials from "./specials.json"
@@ -20,14 +20,14 @@ function Home() {
           </p>
         </section>
       </div>
-      <div className="specials">
-        <h2>Today's specials</h2>
+      <div className="container justify-content-center">
+        <h2 className=" my-4">Today's specials</h2>
       </div>
-      <div className="home-row">
+      <Row className="justify-content-center"  style = {{maxWidth:"85vw",marginRight:"auto",marginLeft:"auto"}}>
         {specials.map(item => {
           return(<Specials key = {item.id} {...item} />)
         })}      
-      </div>   
+      </Row>   
     </div>
   );
 }

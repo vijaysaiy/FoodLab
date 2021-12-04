@@ -26,11 +26,40 @@ export const register = async (user) => {
    
 }
 export const updateUserDetails = async (userDetails) => {
-    console.log(userDetails.email);
+    let url;
+    if(userDetails.email.includes("admin")){
+        url = `http://localhost:8080/admins/update/${userDetails.id}`
+    }else{
+        url =`http://localhost:8080/users/update/${userDetails.id}`
+    }
     try{       
-        const res = await axios.put(`http://localhost:8080/users/update/${userDetails.id}`,userDetails)
+        const res = await axios.put(url,userDetails)
     }catch (error) {
         console.log(error)
     }
 
 }
+export const getAllUsers = async() => {
+    try {
+      const res = await axios.get("http://localhost:8080/users/all");
+      return res.data
+    } catch (error) {
+      console.log(error) 
+    }
+  }
+export const getAllAdmins = async() => {
+    try {
+      const res = await axios.get("http://localhost:8080/admins/all");
+      return res.data
+    } catch (error) {
+      console.log(error) 
+    }
+  }
+  export const deleteUser = async (id) => {
+    try {
+      const res = await axios.delete(`http://localhost:8080/users/delete/${id}`)
+      console.log(res);
+    } catch (error) {
+      console.log(error)
+    }
+  }

@@ -3,13 +3,14 @@ import { Form, Button, Container, Card } from "react-bootstrap";
 import { register } from '../redux/APIcalls/user';
 
 function Signup() {
-  const initialValues = {username:"",mobile:"",email:"",password:"",cpassword:""};
+  const initialValues = {username:"",email:"",mobile:""};
   const [userDetails,setUserDetails] = useState(initialValues);
   function handleInputs(event) {
     let name = event.target.name;
     let value = event.target.value;
-    setUserDetails({ ...userDetails, [name]: value });
+    setUserDetails({...userDetails,[name]: value });
   }
+  console.log(userDetails);
   function handleSubmit(e) {
     e.preventDefault();
     if(userDetails.username.includes("admin") || userDetails.email.includes("admin")){
@@ -35,7 +36,7 @@ function Signup() {
       </Card.Text>
       <Container className="my-2" style={{ width: "400px" }}>
         <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-3" >
             <Form.Label>Username</Form.Label>
             <Form.Control
               type="text"
