@@ -33,8 +33,7 @@ function App() {
           </Route>
           <Route exact path="/admin/">
             {user ?  <AdminDashboard /> : <Redirect to ="/" />}
-          </Route>
-          
+          </Route>          
           <Route exact path="/user">
             {user ? <UserDashboard /> : <Redirect to ="/" />}            
           </Route>

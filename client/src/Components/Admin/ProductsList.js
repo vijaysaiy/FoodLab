@@ -6,8 +6,7 @@ import ErrorCompnonent from "../ErrorCompnonent";
 function ProductsList({ setScreen, setItem }) {
 
   const [products, setProducts] = useState([]);
-  const [change,setChange] = useState(false);
-  
+  const [change,setChange] = useState(false);  
 
   function handleEdit(item) {
     setItem(item);
@@ -15,6 +14,7 @@ function ProductsList({ setScreen, setItem }) {
   }
   function handleDelete(id) {
     deleteProduct(id);
+    setChange(!change)
     alert("Item deleted Successfully");
   }
   function handleDisable(item) {
@@ -35,7 +35,7 @@ function ProductsList({ setScreen, setItem }) {
       setProducts(data);
     };
     fetchAPIData();
-  }, [change]);
+  },[change]);
 
   if(!products){
     return (<ErrorCompnonent />)

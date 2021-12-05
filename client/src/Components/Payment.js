@@ -34,7 +34,7 @@ function Payment({pay}) {
           </Form.Group> 
       
           <Form.Group as={Col} controlId="formGridCVV">           
-            <Form.Control required name= "CVV" placeholder="CVV" />
+            <Form.Control required type= "password" name= "CVV" placeholder="CVV" />
           </Form.Group>
         </Row>     
         <Button as = {Link} to="/success" variant="primary" className="ml-auto"  type="submit" onClick = {pay}>
